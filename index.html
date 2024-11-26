@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Appet - Login</title>
+
+  <!-- Incluir el enlace a Toastify (si lo necesitas en tu login) -->
+   <link rel="shortcut icon" href="./img/icon.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastify-js/1.12.0/toastify.min.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+  
+  <!-- Incluir tu propio CSS -->
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+  <!-- Video de fondo -->
+  <div class="video-background">
+    <video autoplay muted loop id="background-video">
+      <source src="./img/background.mp4" type="video/mp4">
+      Tu navegador no soporta el elemento de video.
+    </video>
+  </div>
+  <!-- Degradado sobre el video -->
+  <div class="overlay"></div>
+
+  <!-- Logo centrado en la parte superior -->
+  <div class="logo">
+    <img src="./img/Sin título-1.png" alt="Appet Logo">
+  </div>
+
+  <!-- Formulario de login con el botón de Google -->
+  <div class="login-container">
+    <button id="login-google" class="login-btn">Iniciar sesión con Google</button>
+<div id="user-info" class="hidden">
+  <span id="user-email"></span>
+</div>
+
+    <!-- Enlace a la política de privacidad -->
+    <a href="/privacy-policy.html" class="privacy-policy">Política de privacidad</a>
+  </div>
+
+  <!-- Agregar los scripts necesarios -->
+  <script type="module" src="script.js"></script>
+
+  <script type="module" src="firebase-config.js"></script>
+</body>
+</html>

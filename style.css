@@ -1,0 +1,106 @@
+/* Reset de márgenes y padding para que el diseño sea limpio */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Contenedor del video de fondo */
+  .video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1; /* Colocamos el video en el fondo */
+    overflow: hidden;
+  }
+  
+  #background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Hace que el video cubra toda el área del contenedor */
+  }
+  
+  /* Degradado sobre el video */
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, #00ff5588 20%, #ffffffeb 80%);
+    z-index: 0; /* El degradado debe estar por encima del video pero debajo de los elementos */
+  }
+  
+  /* Fondo verde con degradado */
+  body {
+    height: 100vh;  /* Tomar todo el alto de la pantalla */
+    font-family: Arial, sans-serif;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Logo centrado en la parte superior */
+  .logo {
+    z-index: 999;
+    margin-top: 50px; /* Espacio en la parte superior */
+  }
+  
+  .logo img {
+    z-index: 9999;
+    width: 260px;  /* Ajusta el tamaño del logo */
+    height: auto;
+  }
+  
+  /* Contenedor del login */
+  .login-container {
+    width: 100%;  /* Ancho completo */
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-bottom: 30px; /* Un poco de espacio hacia el fondo */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Botón de Google */
+  .login-btn {
+    width: 90%;  /* Ancho del 90% de la pantalla */
+    padding: 15px;
+    font-size: 16px;
+    background-color: #3bac4c;  /* Color de fondo de Google */
+    color: white;
+    border: 5px solid #3bac4c;
+    border-radius: 40px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+  }
+ 
+  .login-btn:hover {
+    border: 5px solid #3bac4c;
+    color: rgb(82, 82, 82);
+    font-weight: 10px;
+    background-color: #ffffff;  /* Cambio de color en hover */
+  }
+  
+  /* Enlace de política de privacidad */
+  .privacy-policy {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .privacy-policy:hover {
+    text-decoration: underline;
+  }
+  
